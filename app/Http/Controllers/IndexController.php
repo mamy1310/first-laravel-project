@@ -7,8 +7,4 @@ class IndexController extends Controller
     {
         return view('welcome', ["name" => "Mamitiana"]);
     }
-
-    public function show($id): string{
-        return "Article portant l'identifiant $id.";
-    }
 }
