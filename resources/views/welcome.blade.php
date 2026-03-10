@@ -4,6 +4,9 @@
     <h2>Bienvenue sur le site de {{ $name }}</h2>
     @forelse ($articles as $article)
         <x-article :titre="$article['titre']" :description="$article['description']"/>
+        @if ($loop->iteration === $loop->count - 1)
+            @break
+        @endif
     @empty
         <li>Aucun article trouvé.</li>
     @endforelse
