@@ -7,14 +7,11 @@
 </head>
 
 <body>
-    <header>
-        <h1>Mon site Laravel</h1>
-    </header>
+    @include('partials.header')
     <main>
         @yield('content')
     </main>
-    <footer>
-        <p>© 2025 - Tous droits réservés</p>
+    @include('partials.footer')
     </footer>
 </body>
 
