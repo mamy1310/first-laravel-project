@@ -8,10 +8,10 @@ use Illuminate\View\Component;
 
 class Article extends Component
 {
-    public $titre;
-    public $description;
+    public string $titre;
+    public string $description;
     
-    public function __construct($titre, $description)
+    public function __construct(string $titre, string $description)
     {
         $this->titre = $titre;
         $this->description = $description;
