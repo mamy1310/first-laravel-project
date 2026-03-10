@@ -1,2 +1,2 @@
 <h3>{{ $titre }}</h3>
-<p>{{ $slot }}</p>
+<p>{{ $description }}</p>
