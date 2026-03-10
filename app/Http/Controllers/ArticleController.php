@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 class ArticleController extends Controller
 {
-    public function show($id): string{
-        return "Article portant l'identifiant $id.";
+    public function show($id){
+        return view('pages.article-details', ["id" => $id]);
     }
 }
