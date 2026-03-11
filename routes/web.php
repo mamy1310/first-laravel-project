@@ -7,9 +7,9 @@ use App\Http\Controllers\IndexController;
 Route::get('/', [IndexController::class, 'index'])->name('home');
 
 Route::prefix('article')->group(function () {
-    Route::get('/creer', [ArticleController::class, 'create']);
-    Route::get('/modifier/{id}', [ArticleController::class, 'update']);
-    Route::get('/supprimer/{id}', [ArticleController::class, 'delete']);
+    Route::get('/creer', [ArticleController::class, 'create'])->name('article.creer');
+    Route::get('/modifier/{id}', [ArticleController::class, 'update'])->name('article.modifier');
+    Route::get('/supprimer/{id}', [ArticleController::class, 'delete'])->name('article.supprimer');
     Route::get('/{id}', [ArticleController::class, 'show'])->name('article.details');
 });
 

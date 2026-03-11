@@ -7,6 +7,9 @@ class ArticleController extends Controller
 {
     public function show($id){
         $article = Article::find($id);
+        if (!$article) {
+            return view('errors.not-found');
+        }
         return view('pages.article-details', ["article" => $article]);
     }
 
