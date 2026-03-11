@@ -3,7 +3,7 @@
 @section('content')
     <h2>Bienvenue sur le site de {{ $name }}</h2>
     @forelse ($articles as $article)
-        <x-article :titre="$article['titre']" :description="$article['description']"/>
+        <x-article :id="$article['id']" :titre="$article['titre']" :description="$article['description']"/>
         @if ($loop->iteration === $loop->count - 1)
             @break
         @endif
